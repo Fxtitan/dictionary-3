@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let app = express();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', (req, res, next)  => {
+  return res.redirect('/words/get-words')
 });
+
+
+
 
 module.exports = router;
